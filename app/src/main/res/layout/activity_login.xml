@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.LoginActivity">
+        <ImageView
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp200"
+            android:src="@drawable/app_logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp250"
+            android:background="@drawable/login_box"
+            android:layout_margin="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/member_s_login"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/white"
+                android:fontFamily="@font/morn_ultra_bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp30"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_mobile_num"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_number"
+                        android:inputType="number"
+                        android:background="@android:color/transparent"
+                        android:singleLine="true"
+                        android:textColor="@color/design_default_color_primary"
+                        android:textColorHint="@color/design_default_color_primary"
+                        android:textSize="@dimen/sp14"
+                        android:fontFamily="@font/morn_bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:src="@drawable/ic_mobile"/>
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp50"
+                android:text="@string/login"
+                android:background="@drawable/ic_button"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/white"
+                android:fontFamily="@font/morn_ultra_bold"
+                android:onClick="performLogin"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
